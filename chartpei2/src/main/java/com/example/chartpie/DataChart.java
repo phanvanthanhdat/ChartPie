@@ -1,4 +1,4 @@
-package com.example.chartpei;
+package com.example.chartpie;
 
 /**
  * Created by baohp on 23/03/2017.

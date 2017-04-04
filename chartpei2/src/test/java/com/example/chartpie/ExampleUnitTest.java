@@ -1,4 +1,4 @@
-package com.example.chartpei;
+package com.example.chartpie;
 
 import org.junit.Test;
 

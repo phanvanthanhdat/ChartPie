@@ -1,4 +1,4 @@
-package com.example.chartpei;
+package com.example.chartpie;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

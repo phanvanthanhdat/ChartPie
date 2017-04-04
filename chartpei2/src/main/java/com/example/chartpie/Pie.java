@@ -1,4 +1,4 @@
-package com.example.chartpei;
+package com.example.chartpie;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -25,7 +25,7 @@ import java.util.List;
  * Created by baohp on 17/03/2017.
  */
 
-public class cutomview extends View {
+public class Pie extends View {
     Paint mPaint;
     int width;
     int height;
@@ -42,23 +42,23 @@ public class cutomview extends View {
     String mUnit = "";
     int margin;
 
-    public cutomview(Context context) {
+    public Pie(Context context) {
         super(context);
     }
 
-    public cutomview(Context context, @Nullable AttributeSet attrs) {
+    public Pie(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStyle(Paint.Style.FILL);
         mList = new ArrayList<>();
     }
 
-    public cutomview(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public Pie(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public cutomview(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public Pie(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
