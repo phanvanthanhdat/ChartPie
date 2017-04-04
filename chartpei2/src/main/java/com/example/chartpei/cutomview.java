@@ -193,7 +193,7 @@ public class cutomview extends View {
             }
 
 
-            mPaint.setColor(Color.WHITE);
+            mPaint.setColor(getContext().getResources().getColor(R.color.color_text));
             mPaint.setTextSize((float) ((float) (sizeBFottom * 3 / 19)));
             String name = mList.get(0).getDisription() + ":";
             mPaint.getTextBounds(name, 0, name.length(), bounds);
@@ -203,7 +203,6 @@ public class cutomview extends View {
             canvas.restore();
 
 
-            mPaint.setColor(Color.WHITE);
             mPaint.setTextSize((float) (sizeBFottom * 4.5 / 19));
             name = mList.get(0).getPercenter() + "";
             canvas.drawText(name, (float) (width * 0.09 + widthtext + 10), (float) (height + sizeBFottom * 8 / 19 + 2 * margin), mPaint);
@@ -212,7 +211,6 @@ public class cutomview extends View {
             canvas.restore();
 
 
-            mPaint.setColor(Color.WHITE);
             mPaint.setTextSize((float) (sizeBFottom * 3 / 19));
             name = "% (" + mList.get(0).getPoint() + mUnit + ")";
             canvas.drawText(name, (float) (width * 0.09 + bounds1.width() + widthtext + 10), (float) (height + sizeBFottom * 8 / 19 + 2 * margin), mPaint);
@@ -220,7 +218,6 @@ public class cutomview extends View {
             canvas.restore();
 
 
-            mPaint.setColor(Color.WHITE);
             mPaint.setTextSize((float) (sizeBFottom * 3 / 19));
             name = mList.get(1).getDisription() + ": ";
             mPaint.getTextBounds(name, 0, name.length(), bounds);
@@ -229,7 +226,6 @@ public class cutomview extends View {
             canvas.save();
             canvas.restore();
 
-            mPaint.setColor(Color.WHITE);
             mPaint.setTextSize((float) (sizeBFottom * 4.5 / 19));
             name = mList.get(1).getPercenter() + "";
             mPaint.getTextBounds(name, 0, name.length(), bounds1);
@@ -238,7 +234,6 @@ public class cutomview extends View {
             canvas.restore();
 
 
-            mPaint.setColor(Color.WHITE);
             mPaint.setTextSize((float) (sizeBFottom * 3 / 19));
             name = "% (" + mList.get(1).getPoint() + mUnit + ")";
             canvas.drawText(name, (float) (width * 0.09 + bounds1.width() + widthtext1 + 10), (float) (height + sizeBFottom * 14 / 19 + 2 * margin), mPaint);
@@ -256,7 +251,7 @@ public class cutomview extends View {
             canvas.save();
             canvas.restore();
             if (mList.size() == 3) {
-                mPaint.setColor(Color.WHITE);
+                mPaint.setColor(getContext().getResources().getColor(R.color.color_text));
                 mPaint.setTextSize((float) (sizeBFottom * 3 / 19));
                 name = mList.get(2).getDisription() + ":";
                 mPaint.getTextBounds(name, 0, name.length(), bounds);
