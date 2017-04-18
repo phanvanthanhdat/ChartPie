@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.baohp.chartpei.MainActivity">
 
-    <TextView
+    <com.example.chartpie.Pie
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"

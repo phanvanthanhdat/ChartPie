@@ -38,6 +38,7 @@ public class Pie extends View {
     int radiusStart = 270;
     int sizeWidthSub;
     int sizeHeightSub;
+    int color = Color.parseColor("#bec4d2");
     String noData = "No Data";
     String mUnit = "";
     int margin;
@@ -105,8 +106,12 @@ public class Pie extends View {
         Rect bounds = new Rect();
         Rect bounds1 = new Rect();
         if (mList.size() > 0) {
+            if (mList.get(mList.size() - 1).getPercenter() == 0) {
+                mPaint.setColor(color);
+            } else {
+                mPaint.setColor(mList.get(mList.size() - 1).getColor());
+            }
 
-            mPaint.setColor(mList.get(mList.size() - 1).getColor());
             canvas.drawCircle(centerWidth, centerHeight, (float) ((size / 2) - size * (mList.size() - 1) * 0.06), mPaint);
             canvas.save();
             canvas.restore();
@@ -263,7 +268,7 @@ public class Pie extends View {
 
                 mPaint.setTextSize((float) (sizeBFottom * 4.5 / 19));
                 name = mList.get(2).getPercenter() + "";
-                mPaint.getTextBounds(name, 0, 4, bounds1);
+                mPaint.getTextBounds(name, 0, name.length(), bounds1);
                 canvas.drawText(name, (float) (width * 0.09) + width / 2 + widthtext2, (float) (height + sizeBFottom * 8 / 19 + 2 * margin), mPaint);
                 canvas.save();
                 canvas.restore();
